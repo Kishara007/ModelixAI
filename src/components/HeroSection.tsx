@@ -407,7 +407,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
           </div>
         </div>
 
-        {/* Brand Name "MODELIX AI" */}
+        {/* Brand Name "MODELIX AI" — Exact Previous Text-Only Design */}
         <h1
           ref={logoTextRef}
           className="fixed bottom-4 left-4 sm:bottom-8 sm:left-10 z-50 font-heading text-5xl sm:text-7xl md:text-9xl font-extrabold text-[#FFFFFF] tracking-tight uppercase pointer-events-none select-none logo-white-purple-glow origin-left text-left whitespace-nowrap leading-none"

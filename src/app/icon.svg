@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Pure White Rounded Background -->
+  <rect width="512" height="512" rx="128" fill="#FFFFFF" />
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="#000000" stroke-width="12" opacity="0.15" />
+  
+  <!-- Pure Black Camera Body -->
+  <path
+    d="M140 180 L180 130 L332 130 L372 180 L420 180 C442 180 460 198 460 220 L460 380 C460 402 442 420 420 420 L92 420 C70 420 52 402 52 380 L52 220 C52 198 70 180 92 180 Z"
+    fill="none"
+    stroke="#000000"
+    stroke-width="28"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  
+  <!-- Pure Black Center Lens -->
+  <circle cx="256" cy="295" r="75" fill="none" stroke="#000000" stroke-width="28" />
+  <circle cx="256" cy="295" r="34" fill="#000000" />
+  
+  <!-- Pure Black AI Sparkle Accent -->
+  <path d="M380 215 L387 235 L407 242 L387 249 L380 269 L373 249 L353 242 L373 235 Z" fill="#000000" />
+</svg>
