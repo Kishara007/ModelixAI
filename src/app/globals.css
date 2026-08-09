@@ -1,0 +1,254 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #121212;
+  --bg-card: rgba(18, 18, 18, 0.85);
+  --bg-card-hover: rgba(28, 28, 28, 0.95);
+  --accent-purple: #B026FF;
+  --accent-rose: #F43F5E;
+  --accent-purple-glow: rgba(176, 38, 255, 0.25);
+  --text-main: #F9FAFB;
+  --text-muted: #9CA3AF;
+  --text-dim: #6B7280;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-highlight: rgba(176, 38, 255, 0.5);
+
+  --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Explicit CSS guarantee for grid image card containers */
+.grid-outer-card {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100px;
+}
+
+/* Custom Selection & Scrollbar */
+::selection {
+  background-color: #B026FF;
+  color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(176, 38, 255, 0.4);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-purple);
+}
+
+/* Typography Utilities */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.heading-hero {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+/* Pure White + Neon Purple Glow for MODELIX AI Logo Header Position */
+.logo-white-purple-glow {
+  color: #FFFFFF !important;
+  text-shadow: 
+    0 0 15px rgba(176, 38, 255, 0.95),
+    0 0 35px rgba(176, 38, 255, 0.8),
+    0 0 60px rgba(176, 38, 255, 0.5),
+    2px 2px 4px rgba(0, 0, 0, 0.95);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.95));
+}
+
+/* 3D Multi-Layered Text Shadow for MODELIX AI Logo */
+.logo-3d-text {
+  text-shadow: 
+    1px 1px 0px rgba(176, 38, 255, 0.8),
+    2px 2px 0px rgba(120, 0, 200, 0.9),
+    3px 3px 0px rgba(80, 0, 150, 0.95),
+    4px 4px 0px #000000,
+    5px 5px 14px rgba(0, 0, 0, 0.95),
+    0px 0px 45px rgba(176, 38, 255, 0.65);
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.95));
+}
+
+/* 3D Text Shadow for Middle Narrative Text in Hero */
+.hero-middle-3d-text {
+  text-shadow: 
+    1px 1px 0px rgba(0, 0, 0, 0.9),
+    2px 2px 0px rgba(0, 0, 0, 0.95),
+    3px 3px 6px rgba(0, 0, 0, 0.95),
+    0px 0px 25px rgba(176, 38, 255, 0.75),
+    0px 0px 45px rgba(0, 0, 0, 0.9);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.95));
+}
+
+/* Gradient Text with Padding Guarantee to Prevent Italic Glyphs Clipping */
+.volt-gradient-text {
+  background: linear-gradient(135deg, #F9FAFB 0%, #B026FF 50%, #F43F5E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-right: 0.15em;
+}
+
+.bronze-gradient-text {
+  background: linear-gradient(135deg, #B026FF 0%, #F43F5E 50%, #F9FAFB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-right: 0.15em;
+}
+
+/* Glassmorphism containers in Creative Studio Neon Purple dark theme */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-highlight);
+  background: var(--bg-card-hover);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.9), 0 0 30px var(--accent-purple-glow);
+}
+
+/* Buttons & Micro Interactions */
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 2.5rem;
+  background: #B026FF;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  border: 1px solid #B026FF;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(176, 38, 255, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(176, 38, 255, 0.55), 0 0 20px rgba(244, 63, 94, 0.4);
+  background: #C246FF;
+  border-color: #C246FF;
+}
+
+.btn-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #F9FAFB;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #B026FF;
+  color: #B026FF;
+}
+
+/* 3-Row Infinite Motion Gallery Marquee Animations */
+@keyframes marqueeLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marqueeRightToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-left-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeftToRight 40s linear infinite;
+}
+
+.animate-marquee-right-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeRightToLeft 40s linear infinite;
+}
+
+.animate-marquee-left-right:hover,
+.animate-marquee-right-left:hover {
+  animation-play-state: paused;
+}
+
+/* Floating animation keyframes */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
